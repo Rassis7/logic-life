@@ -9,11 +9,9 @@ const useStyles = makeStyles(theme => ({
     background: '#fff',
     display: 'flex',
     justifyContent: 'center',
-    width: '50vw',
+    width: '60vw',
     padding: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    paddingRight: theme.spacing(20),
-    paddingLeft: theme.spacing(20),
   },
   descriptionContent: {
     display: 'flex',
@@ -23,16 +21,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Description = () => {
+const Description = ({ question }) => {
   const classes = useStyles();
 
   return (
     <Container className={classes.descriptionContainer}>
       <div className={classes.descriptionContent}>
-        <Typography variant="h4">Perguntar 1</Typography>
-        <Typography variant="subtitle1">
-          Essa pergunta é para o jogador escolher
-        </Typography>
+        <Typography variant="subtitle1">{question}</Typography>
       </div>
     </Container>
   );
