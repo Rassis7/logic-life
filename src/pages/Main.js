@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   history: {
     background: '#fff',
-    paddingTop: theme.spacing(15),
+    paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(8),
     display: 'flex',
     justifyContent: 'space-between',
@@ -23,7 +23,7 @@ export default function Main() {
   return (
     <>
       <CssBaseline />
-      <LifeBar />
+      {/* <LifeBar /> */}
       <main>
         <div className={classes.history}>
           <Image />
@@ -31,7 +31,7 @@ export default function Main() {
         </div>
         <Conditions />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

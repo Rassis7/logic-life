@@ -1,0 +1,46 @@
+{
+  "/comodos": ["cozinha", "sala", "quarto", "banheiro"],
+
+  "/intro": [
+    {
+      "id": 1,
+      "name": "while",
+      "description": "bla bla"
+    }
+  ],
+
+  "/pergunta/cozinha": {
+    "enunciado": "",
+    "introId": 1,
+    "opcoes": [
+      { "texto": "resposta a", "isCorrect": false },
+      { "texto": "resposta b", "isCorrect": true }
+    ]
+  },
+
+  "/pergunta/sala": {
+    "enunciado": "",
+    "introId": 1,
+    "opcoes": [
+      { "texto": "resposta a", "isCorrect": false },
+      { "texto": "resposta b", "isCorrect": true }
+    ]
+  },
+
+  "/pergunta/quarto": {
+    "enunciado": "",
+    "introId": 1,
+    "opcoes": [
+      { "texto": "resposta a", "isCorrect": false },
+      { "texto": "resposta b", "isCorrect": true }
+    ]
+  },
+  "/pergunta/banheiro": {
+    "enunciado": "",
+    "introId": 1,
+    "opcoes": [
+      { "texto": "resposta a", "isCorrect": false },
+      { "texto": "resposta b", "isCorrect": true }
+    ]
+  }
+}
