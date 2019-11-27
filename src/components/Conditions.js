@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+
+import { darken } from 'polished';
 import styled, { css } from 'styled-components';
 
 import Alert from '../components/Alert';
@@ -33,50 +33,57 @@ const CardStyled = styled(Card)`
   width: 100%;
   justify-content: center;
   align-items: center;
-  ${props => {
-    if (!props.color) return;
-    return css`
-      box-shadow: 10px 10px 10px solid ${props.color} !important;
-    `;
-  }}
+  /* box-shadow: ${props => `1px 1px 1px solid ${props.color} !important`}; */
+
+  transition: background 1s;
+  &:hover {
+    background: ${darken(0.09, '#ab47bc')};
+    color: #fff;
+    cursor: pointer;
+  }
 `;
 
-const Conditions = ({ conditions }) => {
+const TypographyStyled = styled(Typography)``;
+
+const Conditions = ({ conditions, introId }) => {
   const [openAlert, setOpenAlert] = useState(false);
   const [itemCondition, setItemCondition] = useState([]);
+  const [isCorrect, setIsCorrect] = useState();
 
   useEffect(() => setItemCondition(conditions), [conditions]);
 
   const classes = useStyles();
   const handleAlert = () => setOpenAlert(!openAlert);
 
-  const handleSubmit = () => {
-    //handleAlert()
+  const handleVote = item => {
+    handleAlert();
+    setIsCorrect(item.isCorrect);
   };
 
   return (
     <>
       <Container className={classes.cardGrid} maxWidth="md">
-        {/* End hero unit */}
         <Grid container spacing={4}>
           {itemCondition.map((item, index) => (
             <Grid item key={index} xs={12} md={6}>
-              <CardStyled className={classes.card} color="red">
+              <CardStyled color="#ab47bc" onClick={() => handleVote(item)}>
                 <CardContent className={classes.cardContent}>
-                  <Typography>{item.texto}</Typography>
+                  <TypographyStyled variant="h6">{item.texto}</TypographyStyled>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary" onClick={handleSubmit}>
-                    Enviar
-                  </Button>
-                </CardActions>
               </CardStyled>
             </Grid>
           ))}
         </Grid>
       </Container>
 
-      {openAlert && <Alert open={openAlert} onClose={handleAlert} />}
+      {openAlert && (
+        <Alert
+          open={openAlert}
+          onClose={handleAlert}
+          isCorrect={isCorrect}
+          introId={introId}
+        />
+      )}
     </>
   );
 };
