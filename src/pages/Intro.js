@@ -63,41 +63,30 @@ export default function Intro({ history }) {
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="SWITCH"
-          subtitle="Quando uma variável tende a assumir alguns valores pré-definidos, como por exemplo:
-
-          tipo_de_alimento: carboidrato, proteina ou gordura, podemos utilizar um switch caso seja necessário tratar cada tipo com uma abordagem. Ex.: 
-          
-          
-          switch(TIPO_ALIMENTO){
-          case CARBOIDRATO:
-          quantidade_maxima = 100gr;
-            break;
-          case PROTEINA:
-          quantidade_maxima = 200gr;
-            break;
-          case GORDURA:
-          quantidade_maxima = 50gr;
-            break;
+          subtitle={
+            <pre style={{ whiteSpace: 'pre-wrap' }}>
+              Quando uma variável tende a assumir alguns valores pré-definidos,
+              como por exemplo: tipo_de_alimento: carboidrato, proteina ou
+              gordura, podemos utilizar um switch caso seja necessário tratar
+              cada tipo com uma abordagem. Ex.:<br></br> switch(TIPO_ALIMENTO)
+              {'{'}case CARBOIDRATO:quantidade_maxima = 100gr;break;case
+              PROTEINA: quantidade_maxima = 200gr;break;case
+              GORDURA:quantidade_maxima = 50gr;break;{'}'}
+            </pre>
           }
-          "
         />
         <Slide
           media={<img src="/images/logo.png" />}
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="FOR"
-          subtitle="Os comandos de repetição são um recurso que permite que algo possa ser repetido mais de uma vez de acordo com uma condição ou com um contador.
-
-          O For é utilizado para executar um conjunto de comandos executado por um número X de vezes.
-          É passada uma situação inicial, uma condição e uma ação a ser executada a cada repetição.
-          Uma variável é inicializada com uma valor inicial.
-          Essa variável é utilizada para controlar a quantidade de vezes em que o conjunto de comandos será executado.
-          E ao final do conjunto de comandos a variável sempre sofrerá uma alteração, aumentando ou diminuindo de acordo com a lógica utilizada.
-          
-          for($contador = 0; $contador < 10; $contador++){
-             echo $contador;
+          subtitle={
+            <pre style={{ whiteSpace: 'pre-wrap' }}>
+              {
+                'O For é utilizado para executar um conjunto de comandos executado por um número X de vezes. É passada uma situação inicial, uma condição e uma ação a ser executada a cada repetição. Uma variável é inicializada com uma valor inicial. Essa variável é utilizada para controlar a quantidade de vezes em que o conjunto de comandos será executado. for($contador = 0; $contador < 10; $contador++){ echo $contador;}'
+              }
+            </pre>
           }
-          "
         />
         <Slide
           media={<img src="/images/logo.png" />}
