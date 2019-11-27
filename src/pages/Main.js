@@ -9,7 +9,7 @@ export default function Main() {
   useEffect(() => {
     const getRoom = async () => {
       const response = await api.get('/comodos');
-      var rand =
+      const rand =
         response.data[Math.floor(Math.random() * response.data.length)];
       setRoom(rand);
     };

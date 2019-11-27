@@ -21,9 +21,6 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
 }));
-
-
-
 const Description = ({ question }) => {
   const classes = useStyles();
 
@@ -32,10 +29,9 @@ const Description = ({ question }) => {
       <div className={classes.descriptionContent}>
         <Typography variant="subtitle1">
           <Typewriter
-            options={{ delay: 50 }}//aumente o valor para ficar mais lento
-            onInit={(typewriter) => {
-              typewriter.typeString(question)
-                .start();
+            options={{ delay: 50 }} //aumente o valor para ficar mais lento
+            onInit={typewriter => {
+              typewriter.typeString(question).start();
             }}
           />
         </Typography>
