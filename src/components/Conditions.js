@@ -68,7 +68,7 @@ const Conditions = ({ conditions, introId }) => {
             <Grid item key={index} xs={12} md={6}>
               <CardStyled color="#ab47bc" onClick={() => handleVote(item)}>
                 <CardContent className={classes.cardContent}>
-                  <TypographyStyled variant="h6">{item.texto}</TypographyStyled>
+                  <TypographyStyled variant="h6">{item.text}</TypographyStyled>
                 </CardContent>
               </CardStyled>
             </Grid>
