@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useMemo, useCallback, useState, useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 import styled from 'styled-components';
 
 const useStyles = makeStyles(theme => ({
@@ -34,21 +34,32 @@ const StyledLogo = styled.div`
 `;
 
 const Description = ({ question }) => {
+  const [typeWriter, setTypeWriter] = useState('');
+  const [index, setIndex] = useState(0);
   const classes = useStyles();
+
+  useEffect(() => {
+    if (question !== typeWriter) {
+      setIndex(0);
+      setTypeWriter('');
+    }
+  }, [question, typeWriter]);
+
+  useEffect(() => {
+    if (index < question.length) setTimeout(createTypeWriter(typeWriter), 50);
+  }, [typeWriter]);
+
+  const createTypeWriter = t => {
+    setTypeWriter(`${t}${question.charAt(index)}`);
+    setIndex(index + 1);
+  };
 
   return (
     <Container className={classes.descriptionContainer}>
       <StyledLogo>
         <img src="/images/logo-fundo.png" alt="logo" />
         <div className={classes.descriptionContent}>
-          <Typography variant="subtitle1">
-            <Typewriter
-              options={{ delay: 0.2 }} //aumente o valor para ficar mais lento
-              onInit={typewriter => {
-                typewriter.typeString(question).start();
-              }}
-            />
-          </Typography>
+          <Typography variant="h6">{typeWriter}</Typography>
         </div>
       </StyledLogo>
     </Container>
