@@ -7,10 +7,9 @@ import Main from './Main';
 export default function Intro({ history }) {
   const [open, setOpen] = useState(true);
 
-
   return (
-<div style={{ position: 'relative', width: '100%', height: 500 }}>
-     {!open  && <Main />}
+    <div style={{ position: 'relative', width: '100%', height: 500 }}>
+      {!open && <Main />}
       <AutoRotatingCarousel
         label="Começar o jogo"
         open={open}
@@ -21,8 +20,23 @@ export default function Intro({ history }) {
       >
         <Slide
           media={
-            <img src="/images/logo.png" />
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/VIUXNSELnnU"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           }
+          mediaBackgroundStyle={{ backgroundColor: purple[400], padding: 20 }}
+          style={{ backgroundColor: purple[600] }}
+          title="Bem-Vindo"
+          subtitle="Assista ao vídeo de apresentação do game"
+        />
+
+        <Slide
+          media={<img src="/images/logo.png" />}
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="IF / ELSE (condicionais)"
@@ -37,9 +51,7 @@ export default function Intro({ history }) {
           "
         />
         <Slide
-          media={
-            <img src="/images/logo.png" />
-          }
+          media={<img src="/images/logo.png" />}
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="SWITCH"
@@ -62,9 +74,7 @@ export default function Intro({ history }) {
           "
         />
         <Slide
-          media={
-            <img src="/images/logo.png" />
-          }
+          media={<img src="/images/logo.png" />}
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="FOR"
@@ -82,9 +92,7 @@ export default function Intro({ history }) {
           "
         />
         <Slide
-          media={
-            <img src="/images/logo.png" />
-          }
+          media={<img src="/images/logo.png" />}
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="WHILE"
@@ -103,17 +111,18 @@ export default function Intro({ history }) {
               divisor = divisor + 1;
           }
           The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe."
-       
         />
-       <Slide
-          media={
-            <img src="/images/logo.png" />
-          }
+        <Slide
+          media={<img src="/images/logo.png" />}
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="Começar o jogo"
-          subtitle={<Button  variant="contained" onClick={() => setOpen(false)}>Iniciar</Button>}
-          />
+          subtitle={
+            <Button variant="contained" onClick={() => setOpen(false)}>
+              Iniciar
+            </Button>
+          }
+        />
       </AutoRotatingCarousel>
     </div>
   );
