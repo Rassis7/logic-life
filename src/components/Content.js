@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext, useMemo } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Image from '../components/Image';
 import Description from '../components/Description';
 import Conditions from '../components/Conditions';
+import Progress from '../components/Progress';
 
 import api from '../services/api';
+import RoomContext from '../context/room';
+import localStorage from 'localStorage';
 
 const useStyles = makeStyles(theme => ({
   history: {
@@ -17,30 +20,45 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Content({ room, ...props }) {
+export default function Content() {
   const classes = useStyles();
+
   const [question, setQuestion] = useState({});
+  const { room } = useContext(RoomContext);
+  const { roomSplit } = useContext(RoomContext);
+  const [gameOver, setGameOver] = useState();
 
   useEffect(() => {
-    const getQuestion = async () => {
-      const response = await api.get(`pergunta-${room}`);
-      var rand =
-        response.data[Math.floor(Math.random() * response.data.length)];
-      setQuestion(rand);
-    };
-    getQuestion();
+    const go = localStorage.getItem('gameOver');
+    setGameOver(go);
+  }, [roomSplit]);
+
+  useEffect(() => {
+    if (room) {
+      const getQuestion = async () => {
+        const response = await api.get(`pergunta-${room}`);
+        var rand =
+          response.data[Math.floor(Math.random() * response.data.length)];
+        setQuestion(rand);
+      };
+      getQuestion();
+    }
   }, [room]);
 
   return (
     <main>
       <div className={classes.history}>
-        <Image room={room} />
-        {question && question.enunciado && (
-          <Description question={question.enunciado} />
+        <Image />
+        {gameOver == 'true' ? (
+          <Progress />
+        ) : (
+          question &&
+          question.enunciado && <Description question={question.enunciado} />
         )}
       </div>
-      {question && question.opcoes && (
-        <Conditions conditions={question.opcoes} />
+
+      {gameOver === 'false' && question && question.opcoes && (
+        <Conditions conditions={question.opcoes} introId={question.introId} />
       )}
     </main>
   );
