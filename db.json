@@ -24,15 +24,15 @@
   ],
   "pergunta-cozinha": [
     {
-      "enunciado": "Joãozinho decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão podres. Ele precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos podres. No recipiente, ele só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Joãozinho consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o contexto e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
+      "description": "Joãozinho decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão podres. Ele precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos podres. No recipiente, ele só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Joãozinho consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o context e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
       "introId": 3,
-      "opcoes": [
+      "option": [
         {
-          "texto": "LOOP (FOR)",
+          "text": "LOOP (FOR)",
           "isCorrect": true
         },
         {
-          "texto": "IF / ELSE",
+          "text": "IF / ELSE",
           "isCorrect": false
         }
       ]
@@ -40,15 +40,15 @@
   ],
   "pergunta-sala": [
     {
-      "enunciado": "Joãozinho configurou em seu serviço de TV para não permitir perfis menores de 18 anos conseguir visualizar filmes de terror e de conteúdo adulto. Quando sua filha de 9 anos tentar acessar a TV, e escolher um filme dos gêneros bloqueado s pelo pai, ela não conseguirá visualizar, para qualquer outro gênero poderá assistir o filme. Usando o conceito apresentado qual elemento da programação pode ser escolhido?",
+      "description": "Joãozinho configurou em seu serviço de TV para não permitir perfis menores de 18 anos conseguir visualizar filmes de terror e de conteúdo adulto. Quando sua filha de 9 anos tentar acessar a TV, e escolher um filme dos gêneros bloqueado s pelo pai, ela não conseguirá visualizar, para qualquer outro gênero poderá assistir o filme. Usando o conceito apresentado qual elemento da programação pode ser escolhido?",
       "introId": 4,
-      "opcoes": [
+      "option": [
         {
-          "texto": "IF / ELSE",
+          "text": "IF / ELSE",
           "isCorrect": false
         },
         {
-          "texto": "SWITCH CASE",
+          "text": "SWITCH CASE",
           "isCorrect": true
         }
       ]
@@ -56,15 +56,15 @@
   ],
   "pergunta-quarto": [
     {
-      "enunciado": "Hoje é quarta-feira e Joãozinho tem uma prova de matematica amanha. Seu amigo o chamou pra eles passarem a tarde jogando futebol, mas Joãozinho ainda não estudou pra prova. Se ele atender o convite do amigo, existe um grande risco dele ficar reprovado. Considerando a situação em que Joãozinho se encontra, qual o elemento da programação pode representar o seu dilema?",
+      "description": "Hoje é quarta-feira e Joãozinho tem uma prova de matematica amanha. Seu amigo o chamou pra eles passarem a tarde jogando futebol, mas Joãozinho ainda não estudou pra prova. Se ele atender o convite do amigo, existe um grande risco dele ficar reprovado. Considerando a situação em que Joãozinho se encontra, qual o elemento da programação pode representar o seu dilema?",
       "introId": 2,
       "opções": [
         {
-          "texto": "WHILE",
+          "text": "WHILE",
           "isCorrect": false
         },
         {
-          "texto": "IF / ELSE",
+          "text": "IF / ELSE",
           "isCorrect": true
         }
       ]
@@ -72,15 +72,15 @@
   ],
   "pergunta-banheiro": [
     {
-      "enunciado": "Joãozinho criou um mecanismo em seu chuveiro para economizar água e adotar um consumo mais consciente. Quando ele abre o chuveiro, um timer de 10 minutos começa a contar, e quando os 10 minutos se expiram, a água é desligada. Enquanto o tempo de 10 minutos não for atingido, o chuveiro permanece ligado. Considerando o caso descrito, qual elemento da programação pode ser identificado?",
+      "description": "Joãozinho criou um mecanismo em seu chuveiro para economizar água e adotar um consumo mais consciente. Quando ele abre o chuveiro, um timer de 10 minutos começa a contar, e quando os 10 minutos se expiram, a água é desligada. Enquanto o tempo de 10 minutos não for atingido, o chuveiro permanece ligado. Considerando o caso descrito, qual elemento da programação pode ser identificado?",
       "introId": 1,
       "opções": [
         {
-          "texto": "SWITCH CASE",
+          "text": "SWITCH CASE",
           "isCorrect": false
         },
         {
-          "texto": "WHILE",
+          "text": "WHILE",
           "isCorrect": true
         }
       ]
