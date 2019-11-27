@@ -19,6 +19,7 @@ Além disso, uma possível conexão entre alunos e instituições de ensino pode
 Passos para rodar o projeto:
 
 1- yarn install
+
 2- yarn serve && yarn start &
 
 O projeto foi desenvolvido com o nodejs na versão 13.2.0 e o pacote json-server
