@@ -58,7 +58,7 @@
     {
       "enunciado": "Hoje é quarta-feira e Joãozinho tem uma prova de matematica amanha. Seu amigo o chamou pra eles passarem a tarde jogando futebol, mas Joãozinho ainda não estudou pra prova. Se ele atender o convite do amigo, existe um grande risco dele ficar reprovado. Considerando a situação em que Joãozinho se encontra, qual o elemento da programação pode representar o seu dilema?",
       "introId": 2,
-      "opções": [
+      "opcoes": [
         {
           "texto": "WHILE",
           "isCorrect": false
@@ -74,7 +74,7 @@
     {
       "enunciado": "Joãozinho criou um mecanismo em seu chuveiro para economizar água e adotar um consumo mais consciente. Quando ele abre o chuveiro, um timer de 10 minutos começa a contar, e quando os 10 minutos se expiram, a água é desligada. Enquanto o tempo de 10 minutos não for atingido, o chuveiro permanece ligado. Considerando o caso descrito, qual elemento da programação pode ser identificado?",
       "introId": 1,
-      "opções": [
+      "opcoes": [
         {
           "texto": "SWITCH CASE",
           "isCorrect": false

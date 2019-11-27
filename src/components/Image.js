@@ -1,6 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useContext } from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
+import RoomContext from '../context/room';
 
 const useStyles = makeStyles(theme => ({
   heroContent: {
@@ -50,8 +51,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Image = ({ room }) => {
+const Image = () => {
   const classes = useStyles();
+  const { room } = useContext(RoomContext);
 
   const cssAvatar = type => {
     const avatar = {

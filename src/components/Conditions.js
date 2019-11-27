@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -45,17 +43,19 @@ const CardStyled = styled(Card)`
   }
 `;
 
-const Conditions = ({ conditions }) => {
+const Conditions = ({ conditions, introId }) => {
   const [openAlert, setOpenAlert] = useState(false);
   const [itemCondition, setItemCondition] = useState([]);
+  const [isCorrect, setIsCorrect] = useState();
 
   useEffect(() => setItemCondition(conditions), [conditions]);
 
   const classes = useStyles();
   const handleAlert = () => setOpenAlert(!openAlert);
 
-  const handleSubmit = () => {
-    // handleAlert();
+  const handleVote = item => {
+    handleAlert();
+    setIsCorrect(item.isCorrect);
   };
 
   return (
@@ -64,7 +64,7 @@ const Conditions = ({ conditions }) => {
         <Grid container spacing={4}>
           {itemCondition.map((item, index) => (
             <Grid item key={index} xs={12} md={6}>
-              <CardStyled color="#7159c1" onClick={handleSubmit}>
+              <CardStyled color="#7159c1" onClick={() => handleVote(item)}>
                 <CardContent className={classes.cardContent}>
                   <Typography variant="h6">{item.texto}</Typography>
                 </CardContent>
@@ -74,7 +74,14 @@ const Conditions = ({ conditions }) => {
         </Grid>
       </Container>
 
-      {openAlert && <Alert open={openAlert} onClose={handleAlert} />}
+      {openAlert && (
+        <Alert
+          open={openAlert}
+          onClose={handleAlert}
+          isCorrect={isCorrect}
+          introId={introId}
+        />
+      )}
     </>
   );
 };
