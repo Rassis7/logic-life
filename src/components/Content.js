@@ -14,7 +14,6 @@ const useStyles = makeStyles(theme => ({
   history: {
     background: '#fff',
     paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(8),
     display: 'flex',
     justifyContent: 'space-between',
   },
