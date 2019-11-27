@@ -6,8 +6,9 @@
 
 ## Objetivo
 
-O objetivo deste projeto é conectar alunos de ensino médio à universidades. 
-A divulgação do projeto pode ser:
+O objetivo deste projeto é conectar alunos de ensino médio ao mundo da programação!
+
+Além disso, uma possível conexão entre alunos e instituições de ensino pode ser feita:
     - Por meio de networking orgânico em redes sociais
     - Por meio de networking conectando alunos à universidades e empresas
       (empresas que fornecem patrocínio em troca de anúncios no app) e 
@@ -26,6 +27,9 @@ instalado globalmente (yarn add global json-server).
 ## Equipe
 
 Romulo: https://github.com/Rassis7
+
 Marcello: https://github.com/marcelloti
+
 André: https://github.com/AndreLuizPedroBotelho
+
 Lucas: https://github.com/TheLuksColor
