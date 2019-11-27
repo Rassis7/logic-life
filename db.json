@@ -1,10 +1,5 @@
 {
-  "comodos": [
-    "cozinha",
-    "sala",
-    "quarto",
-    "banheiro"
-  ],
+  "comodos": ["cozinha", "sala", "quarto", "banheiro"],
   "intro": [
     {
       "id": 1,
@@ -29,7 +24,7 @@
   ],
   "pergunta-cozinha": [
     {
-      "description": "Maria decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão estragados. Ela precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos estragados. No recipiente, só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Maria consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o context e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
+      "description": "Maria decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão estragados. Ela precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos estragados. No recipiente, só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Maria consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o contexto e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
       "introId": 3,
       "option": [
         {
