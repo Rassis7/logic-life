@@ -1,21 +1,31 @@
 {
-  "comodos": [
-    "cozinha",
-    "sala",
-    "quarto",
-    "banheiro"
-  ],
+  "comodos": ["cozinha", "sala", "quarto", "banheiro"],
   "intro": [
     {
       "id": 1,
-      "name": "while",
+      "name": "WHILE",
       "description": "bla bla"
     },
+    {
+      "id": 2,
+      "name": "IF / ELSE",
+      "description": "bla bla"
+    },
+    {
+      "id": 3,
+      "name": "LOOP (FOR)",
+      "description": "bla bla"
+    },
+    {
+      "id": 4,
+      "name": "SWITCH CASE",
+      "description": "bla bla"
+    }
   ],
   "pergunta-cozinha": [
     {
       "enunciado": "Joãozinho decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão podres. Ele precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos podres. No recipiente, ele só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Joãozinho consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o contexto e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
-      "introId": 1,
+      "introId": 3,
       "opcoes": [
         {
           "texto": "LOOP (FOR)",
@@ -31,14 +41,14 @@
   "pergunta-sala": [
     {
       "enunciado": "Joãozinho configurou em seu serviço de TV para não permitir perfis menores de 18 anos conseguir visualizar filmes de terror e de conteúdo adulto. Quando sua filha de 9 anos tentar acessar a TV, e escolher um filme dos gêneros bloqueado s pelo pai, ela não conseguirá visualizar, para qualquer outro gênero poderá assistir o filme. Usando o conceito apresentado qual elemento da programação pode ser escolhido?",
-      "introId": 1,
+      "introId": 4,
       "opcoes": [
         {
-          "texto": "if/else",
+          "texto": "IF / ELSE",
           "isCorrect": false
         },
         {
-          "texto": "switch",
+          "texto": "SWITCH CASE",
           "isCorrect": true
         }
       ]
@@ -47,14 +57,14 @@
   "pergunta-quarto": [
     {
       "enunciado": "Hoje é quarta-feira e Joãozinho tem uma prova de matematica amanha. Seu amigo o chamou pra eles passarem a tarde jogando futebol, mas Joãozinho ainda não estudou pra prova. Se ele atender o convite do amigo, existe um grande risco dele ficar reprovado. Considerando a situação em que Joãozinho se encontra, qual o elemento da programação pode representar o seu dilema?",
-      "introId": 1,
+      "introId": 2,
       "opções": [
         {
           "texto": "WHILE",
           "isCorrect": false
         },
         {
-          "texto": "IF",
+          "texto": "IF / ELSE",
           "isCorrect": true
         }
       ]
