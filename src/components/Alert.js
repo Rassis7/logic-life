@@ -31,7 +31,7 @@ export default function Alert({ open, onClose, isCorrect, introId }) {
       return (
         <>
           <Typography>O conceito certo era o: {operator.name}</Typography>
-          <Typography>{operator.description}</Typography>
+          <Typography><pre style={{whiteSpace: 'pre-wrap'}}>{operator.description}</pre></Typography>
         </>
       );
   }, [operator]);
