@@ -29,8 +29,7 @@ const StyledLogo = styled.div`
   align-items: center;
 
   img {
-    width: 400px;
-    height: 256px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -40,7 +39,7 @@ const Description = ({ question }) => {
   return (
     <Container className={classes.descriptionContainer}>
       <StyledLogo>
-        <img src="/images/logo-circle.png" alt="logo" />
+        <img src="/images/logo-fundo.png" alt="logo" />
         <div className={classes.descriptionContent}>
           <Typography variant="subtitle1">
             <Typewriter

@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 
 import styled from 'styled-components';
 import { Line } from 'rc-progress';
 import localStorage from 'localStorage';
-import { Typography } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
 
 import {
   SentimentVeryDissatisfied,
@@ -35,6 +35,13 @@ const StyledTypography = styled(Typography)`
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
+`;
+const StyledButton = styled(Button)`
+  background: #ab47bc !important;
+  color: #fff !important;
+  width: 300px;
+  align-self: center;
 `;
 
 const icon = type => {
@@ -58,8 +65,23 @@ const color = type => {
 };
 
 export default function Progress() {
+  const [progress, setProgress] = useState(0);
+
   const score = useMemo(() => localStorage.getItem('score'), []);
   const Icon = useMemo(() => icon(score));
+
+  const handleInitGame = () => {
+    document.location.reload(true);
+    localStorage.setItem('gameOver', false);
+    localStorage.setItem('score', 0);
+  };
+
+  useEffect(() => {
+    const percentTotal = (parseInt(score) / 4) * 100;
+    if (progress < percentTotal && progress < 100) {
+      setProgress(progress + 1);
+    }
+  }, [progress]);
 
   return (
     <Container>
@@ -68,7 +90,7 @@ export default function Progress() {
       </StyledTypography>
       <StyledDiv>
         <StyledLine
-          percent={(parseInt(score) / 4) * 100}
+          percent={progress || 0}
           strokeWidth="3"
           strokeColor="#ab47bc"
         />
@@ -76,6 +98,8 @@ export default function Progress() {
           style={{ fontSize: 58, color: color(score), marginTop: '-20px' }}
         />
       </StyledDiv>
+
+      <StyledButton onClick={handleInitGame}>Reiniciar o jogo</StyledButton>
     </Container>
   );
 }
