@@ -32,7 +32,14 @@ export default function Intro({ history }) {
           mediaBackgroundStyle={{ backgroundColor: purple[400], padding: 20 }}
           style={{ backgroundColor: purple[600] }}
           title="Bem-Vindo"
-          subtitle="Assista ao vídeo de apresentação do game"
+          subtitle={
+            <pre style={{ whiteSpace: 'pre-wrap' }}>
+              Assista ao vídeo de apresentação do game.<br></br> Em seguida,
+              serão apresentados 04 conceitos de operadores utilizados em
+              programação, e um desafio com quatro perguntas para avaliar seu
+              aprendizado.
+            </pre>
+          }
         />
 
         <Slide
@@ -40,15 +47,16 @@ export default function Intro({ history }) {
           mediaBackgroundStyle={{ backgroundColor: purple[400] }}
           style={{ backgroundColor: purple[600] }}
           title="IF / ELSE (condicionais)"
-          subtitle="Utilizamos estruturas condicionais quando precisamos definir variações de fluxo em uma aplicação.
-
-          Ex.: if (saldo_em_conta >= valor_saque) {
-            saldo_em_conta = saldo_em_conta - valor_saque;
-                  } else {
-          throw Error('Saldo insuficiente!');
-                 }
-          
-          "
+          subtitle={
+            <pre style={{ whiteSpace: 'pre-wrap' }}>
+              Utilizamos estruturas condicionais quando precisamos definir
+              variações de fluxo em uma aplicação. Ex.:<br></br>
+              Se (saldo_em_conta >= valor_saque) <br></br>
+              saldo_em_conta = saldo_em_conta - valor_saque<br></br>
+              então <br></br>
+              Erro(Saldo insuficiente!)<br></br>}
+            </pre>
+          }
         />
         <Slide
           media={<img src="/images/logo.png" />}
