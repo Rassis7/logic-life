@@ -3,6 +3,8 @@
   <img src="https://github.com/Rassis7/logic-life/blob/master/public/images/logo.png?raw=true">
 </p>
 
+## Prévia do projeto
+http://hackathonrsxp2019.insiderframework.com/
 
 ## Objetivo
 
