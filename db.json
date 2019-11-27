@@ -1,30 +1,35 @@
 {
-  "comodos": ["cozinha", "sala", "quarto", "banheiro"],
+  "comodos": [
+    "cozinha",
+    "sala",
+    "quarto",
+    "banheiro"
+  ],
   "intro": [
     {
       "id": 1,
       "name": "WHILE",
-      "description": "bla bla"
+      "description": "São utilizadas, por exemplo, para repetir ações semelhantes que são executadas para todos os elementos de uma lista de dados, ou simplesmente para repetir um mesmo processamento até que a condição seja satisfeita.\n\nO While, repete um bloco de código enquanto uma condição permanecer verdadeira.\n\n numero = 42;divisor = 1;\n\nwhile (divisor <= numero) {\nresto = numero % divisor;if (resto == 0) \n{printf('Divisor encontrado: %d \n', divisor);\n}\ndivisor = divisor + 1;}"
     },
     {
       "id": 2,
       "name": "IF / ELSE",
-      "description": "bla bla"
+      "description": "Utilizamos estruturas condicionais quando precisamos definir variações de fluxo em uma aplicação.\n\nEx.:\n if (saldo_em_conta >= valor_saque){\n          saldo_em_conta = saldo_em_conta - valor_saque;}\nelse {\n          throw Error('Saldo insuficiente!');\n}"
     },
     {
       "id": 3,
       "name": "LOOP (FOR)",
-      "description": "bla bla"
+      "description": "Os comandos de repetição são um recurso que permite que algo possa ser repetido mais de uma vez de acordo com uma condição ou com um contador. \n\nO For é utilizado para executar um conjunto de comandos executado por um número X de vezes.É passada uma situação inicial, uma condição e uma ação a ser executada a cada repetição.Uma variável é inicializada com uma valor inicial.\n\nEssa variável é utilizada para controlar a quantidade de vezes em que o conjunto de comandos será executado.E ao final do conjunto de comandos a variável sempre sofrerá uma alteração, aumentando ou diminuindo de acordo com a lógica utilizada.\n\nfor($contador = 0; $contador < 10; $contador++){\n echo $contador;\n}"
     },
     {
       "id": 4,
       "name": "SWITCH CASE",
-      "description": "bla bla"
+      "description": "Quando uma variável tende a assumir alguns valores pré-definidos, como por exemplo:\n\ntipo_de_alimento: carboidrato, proteina ou gordura, podemos utilizar um switch caso seja necessário tratar cada tipo com uma abordagem.\n \nEx.: \n\nswitch(TIPO_ALIMENTO){\ncase CARBOIDRATO:\n        quantidade_maxima = 100gr;\nbreak;\ncase PROTEINA:\n        quantidade_maxima = 200gr;\nbreak;\ncase GORDURA:\n        quantidade_maxima = 50gr;\nbreak;\n}"
     }
   ],
   "pergunta-cozinha": [
     {
-      "description": "Joãozinho decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão podres. Ele precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos podres. No recipiente, ele só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Joãozinho consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o context e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
+      "description": "Maria decidiu fazer uma omelete, mas sabe que dos 10 ovos que estão na geladeira, 4 estão estragados. Ela precisa de 3 ovos para fazer sua omelete e não tem certeza de quais são os 4 ovos estragados. No recipiente, só consegue retirar um ovo por vez, então decide quebrar um a um, até obter os 3 ovos em bom estado. Após quebrar 7 ovos, Maria consegue os 3 ovos pra sua omelete, encerrando sua busca. Considerando o context e a solução usada para encontrar os 3 ovos, qual elemento de programação podemos identificar?",
       "introId": 3,
       "option": [
         {
@@ -40,7 +45,7 @@
   ],
   "pergunta-sala": [
     {
-      "description": "Joãozinho configurou em seu serviço de TV para não permitir perfis menores de 18 anos conseguir visualizar filmes de terror e de conteúdo adulto. Quando sua filha de 9 anos tentar acessar a TV, e escolher um filme dos gêneros bloqueado s pelo pai, ela não conseguirá visualizar, para qualquer outro gênero poderá assistir o filme. Usando o conceito apresentado qual elemento da programação pode ser escolhido?",
+      "description": "Maria configurou em seu serviço de TV para não permitir perfis menores de 18 anos conseguir visualizar filmes de terror e de conteúdo adulto. Quando sua filha de 9 anos tentar acessar a TV, e escolher um filme dos gêneros bloqueado s pelo pai, ela não conseguirá visualizar, para qualquer outro gênero poderá assistir o filme. Usando o conceito apresentado qual elemento da programação pode ser escolhido?",
       "introId": 4,
       "option": [
         {
@@ -56,7 +61,7 @@
   ],
   "pergunta-quarto": [
     {
-      "description": "Hoje é quarta-feira e Joãozinho tem uma prova de matematica amanha. Seu amigo o chamou pra eles passarem a tarde jogando futebol, mas Joãozinho ainda não estudou pra prova. Se ele atender o convite do amigo, existe um grande risco dele ficar reprovado. Considerando a situação em que Joãozinho se encontra, qual o elemento da programação pode representar o seu dilema?",
+      "description": "Hoje é quarta-feira e Maria tem uma prova de matematica amanhã. Seu amigo a chamou pra eles passarem a tarde jogando futebol, mas Maria ainda não estudou pra prova. Se ela atender o convite do amigo, existe um grande risco dela ficar reprovada. Considerando a situação em que Maria se encontra, qual o elemento da programação pode representar o seu dilema?",
       "introId": 2,
       "option": [
         {
@@ -72,7 +77,7 @@
   ],
   "pergunta-banheiro": [
     {
-      "description": "Joãozinho criou um mecanismo em seu chuveiro para economizar água e adotar um consumo mais consciente. Quando ele abre o chuveiro, um timer de 10 minutos começa a contar, e quando os 10 minutos se expiram, a água é desligada. Enquanto o tempo de 10 minutos não for atingido, o chuveiro permanece ligado. Considerando o caso descrito, qual elemento da programação pode ser identificado?",
+      "description": "Maria criou um mecanismo em seu chuveiro para economizar água e adotar um consumo mais consciente. Quando ela abre o chuveiro, um timer de 10 minutos começa a contar, e quando os 10 minutos se expiram, a água é desligada. Enquanto o tempo de 10 minutos não for atingido, o chuveiro permanece ligado. Considerando o caso descrito, qual elemento da programação pode ser identificado?",
       "introId": 1,
       "option": [
         {
