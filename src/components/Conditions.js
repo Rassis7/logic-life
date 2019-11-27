@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+
+import { darken } from 'polished';
 import styled, { css } from 'styled-components';
 
 import Alert from '../components/Alert';
@@ -33,12 +35,14 @@ const CardStyled = styled(Card)`
   width: 100%;
   justify-content: center;
   align-items: center;
-  ${props => {
-    if (!props.color) return;
-    return css`
-      box-shadow: 10px 10px 10px solid ${props.color} !important;
-    `;
-  }}
+  box-shadow: ${props => `1px 1px 1px solid ${props.color} !important`};
+
+  transition: background 1s;
+  &:hover {
+    background: ${darken(0.09, '#7159c1')};
+    color: #fff;
+    cursor: pointer;
+  }
 `;
 
 const Conditions = ({ conditions }) => {
@@ -51,25 +55,19 @@ const Conditions = ({ conditions }) => {
   const handleAlert = () => setOpenAlert(!openAlert);
 
   const handleSubmit = () => {
-    //handleAlert()
+    // handleAlert();
   };
 
   return (
     <>
       <Container className={classes.cardGrid} maxWidth="md">
-        {/* End hero unit */}
         <Grid container spacing={4}>
           {itemCondition.map((item, index) => (
             <Grid item key={index} xs={12} md={6}>
-              <CardStyled className={classes.card} color="red">
+              <CardStyled color="#7159c1" onClick={handleSubmit}>
                 <CardContent className={classes.cardContent}>
-                  <Typography>{item.texto}</Typography>
+                  <Typography variant="h6">{item.texto}</Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary" onClick={handleSubmit}>
-                    Enviar
-                  </Button>
-                </CardActions>
               </CardStyled>
             </Grid>
           ))}
