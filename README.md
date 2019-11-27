@@ -9,7 +9,9 @@
 O objetivo deste projeto é conectar alunos de ensino médio ao mundo da programação!
 
 Além disso, uma possível conexão entre alunos e instituições de ensino pode ser feita:
+
     - Por meio de networking orgânico em redes sociais
+    
     - Por meio de networking conectando alunos à universidades e empresas
       (empresas que fornecem patrocínio em troca de anúncios no app) e 
       inclusive com isso, trazer a possibilidade de oferecer à um baixo custo
