@@ -33,15 +33,17 @@ const CardStyled = styled(Card)`
   width: 100%;
   justify-content: center;
   align-items: center;
-  box-shadow: ${props => `1px 1px 1px solid ${props.color} !important`};
+  /* box-shadow: ${props => `1px 1px 1px solid ${props.color} !important`}; */
 
   transition: background 1s;
   &:hover {
-    background: ${darken(0.09, '#7159c1')};
+    background: ${darken(0.09, '#ab47bc')};
     color: #fff;
     cursor: pointer;
   }
 `;
+
+const TypographyStyled = styled(Typography)``;
 
 const Conditions = ({ conditions, introId }) => {
   const [openAlert, setOpenAlert] = useState(false);
@@ -64,9 +66,9 @@ const Conditions = ({ conditions, introId }) => {
         <Grid container spacing={4}>
           {itemCondition.map((item, index) => (
             <Grid item key={index} xs={12} md={6}>
-              <CardStyled color="#7159c1" onClick={() => handleVote(item)}>
+              <CardStyled color="#ab47bc" onClick={() => handleVote(item)}>
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">{item.texto}</Typography>
+                  <TypographyStyled variant="h6">{item.text}</TypographyStyled>
                 </CardContent>
               </CardStyled>
             </Grid>

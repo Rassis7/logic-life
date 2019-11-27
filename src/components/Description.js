@@ -2,6 +2,8 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Typewriter from 'typewriter-effect';
+import styled from 'styled-components';
 
 const useStyles = makeStyles(theme => ({
   descriptionContainer: {
@@ -21,14 +23,34 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const StyledLogo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    margin-bottom: 30px;
+  }
+`;
+
 const Description = ({ question }) => {
   const classes = useStyles();
 
   return (
     <Container className={classes.descriptionContainer}>
-      <div className={classes.descriptionContent}>
-        <Typography variant="subtitle1">{question}</Typography>
-      </div>
+      <StyledLogo>
+        <img src="/images/logo-fundo.png" alt="logo" />
+        <div className={classes.descriptionContent}>
+          <Typography variant="subtitle1">
+            <Typewriter
+              options={{ delay: 0.2 }} //aumente o valor para ficar mais lento
+              onInit={typewriter => {
+                typewriter.typeString(question).start();
+              }}
+            />
+          </Typography>
+        </div>
+      </StyledLogo>
     </Container>
   );
 };
