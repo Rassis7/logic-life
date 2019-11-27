@@ -33,6 +33,10 @@ const StyledLogo = styled.div`
   }
 `;
 
+const TypographyStyled = styled(Typography)`
+  color: #666 !important;
+`;
+
 const Description = ({ question }) => {
   const [typeWriter, setTypeWriter] = useState('');
   const [index, setIndex] = useState(0);
@@ -59,7 +63,7 @@ const Description = ({ question }) => {
       <StyledLogo>
         <img src="/images/logo-fundo.png" alt="logo" />
         <div className={classes.descriptionContent}>
-          <Typography variant="h6">{typeWriter}</Typography>
+          <TypographyStyled variant="h6">{typeWriter}</TypographyStyled>
         </div>
       </StyledLogo>
     </Container>

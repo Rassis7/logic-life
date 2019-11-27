@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
+
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import {
+  Typography,
+  Container,
+  Grid,
+  CardContent,
+  Card,
+} from '@material-ui/core';
 
 import { darken } from 'polished';
 import styled, { css } from 'styled-components';
@@ -13,7 +16,7 @@ import Alert from '../components/Alert';
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {
-    paddingTop: theme.spacing(8),
+    // paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
   cardContent: {
@@ -43,7 +46,17 @@ const CardStyled = styled(Card)`
   }
 `;
 
-const TypographyStyled = styled(Typography)``;
+const ContainerTxtStyled = styled(Container)`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  span {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+`;
 
 const Conditions = ({ conditions, introId }) => {
   const [openAlert, setOpenAlert] = useState(false);
@@ -62,13 +75,16 @@ const Conditions = ({ conditions, introId }) => {
 
   return (
     <>
+      <ContainerTxtStyled>
+        <span>Escolha uma opção</span>
+      </ContainerTxtStyled>
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
           {itemCondition.map((item, index) => (
             <Grid item key={index} xs={12} md={6}>
               <CardStyled color="#ab47bc" onClick={() => handleVote(item)}>
                 <CardContent className={classes.cardContent}>
-                  <TypographyStyled variant="h6">{item.text}</TypographyStyled>
+                  <Typography variant="h6">{item.text}</Typography>
                 </CardContent>
               </CardStyled>
             </Grid>
