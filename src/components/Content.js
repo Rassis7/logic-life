@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useContext, useMemo } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Image from '../components/Image';
-import Description from '../components/Description';
-import Conditions from '../components/Conditions';
-import Progress from '../components/Progress';
+import localStorage from 'localStorage';
+import Image from './Image';
+import Description from './Description';
+import Conditions from './Conditions';
+import Progress from './Progress';
 
 import api from '../services/api';
 import RoomContext from '../context/room';
-import localStorage from 'localStorage';
 
 const useStyles = makeStyles(theme => ({
   history: {
@@ -53,12 +53,14 @@ export default function Content() {
           <Progress />
         ) : (
           question &&
-          question.enunciado && <Description question={question.enunciado} />
+          question.description && (
+            <Description question={question.description} />
+          )
         )}
       </div>
 
-      {gameOver === 'false' && question && question.opcoes && (
-        <Conditions conditions={question.opcoes} introId={question.introId} />
+      {gameOver === 'false' && question && question.option && (
+        <Conditions conditions={question.option} introId={question.introId} />
       )}
     </main>
   );
