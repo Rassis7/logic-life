@@ -2,21 +2,22 @@ import React, { useState } from 'react';
 import { purple, blue, green } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
 import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel';
+import Main from './Main';
 
 export default function Intro({ history }) {
-  const [open, setOpen] = useState('false');
+  const [open, setOpen] = useState(true);
+
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: 500 }}>
-      <Button onClick={() => setOpen({ open: true })}>Open carousel</Button>
+<div style={{ position: 'relative', width: '100%', height: 500 }}>
+     {!open  && <Main />}
       <AutoRotatingCarousel
-        label="Próximo"
+        label="Começar o jogo"
         open={open}
-        onClose={() => setOpen({ open: false })}
-        onStart={() => setOpen({ open: false })}
-        mobile
-        autoplay={true}
+        autoplay={false}
+        onStart={() => setOpen(false)}
         style={{ position: 'absolute' }}
+        label=""
       >
         <Slide
           media={
@@ -102,8 +103,17 @@ export default function Intro({ history }) {
               divisor = divisor + 1;
           }
           The Force is a metaphysical and ubiquitous power in the Star Wars fictional universe."
-        />
        
+        />
+       <Slide
+          media={
+            <img src="/images/logo.png" />
+          }
+          mediaBackgroundStyle={{ backgroundColor: purple[400] }}
+          style={{ backgroundColor: purple[600] }}
+          title="Começar o jogo"
+          subtitle={<Button  variant="contained" onClick={() => setOpen(false)}>Iniciar</Button>}
+          />
       </AutoRotatingCarousel>
     </div>
   );
